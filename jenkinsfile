@@ -9,20 +9,21 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                echo 'Pulling BBB from Git Hub..'
-                 checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [],
-    userRemoteConfigs: [[credentialsId: 'aec0f0bb-36a4-44bd-9bd4-21f118b01f2b', url: 'https://github.com/Vasanthkumar1821/sampleXhtml.git']]])
-                  echo 'Success...'
-                  
+               echo 'pulling my sample Xhtml project from github'
+                 checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'aec0f0bb-36a4-44bd-9bd4-21f118b01f2b', url: 'https://github.com/Vasanthkumar1821/sampleXhtml.git']]])
+                echo 'Success...'
             }
         }
 
         stage('Deploy') {
+        
             steps {
-                echo 'Build and Deploy Service by repacking RES ...'
+            
+                echo 'Running sample Ant...'
+                  bat 'ant sample' 
                    
 
             }
         }
-        }
+	}
 }
