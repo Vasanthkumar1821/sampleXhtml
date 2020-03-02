@@ -16,11 +16,13 @@ pipeline {
         }
 
         stage('Deploy') {
-        
+        tools {
+                jdk "ibmjdk"
+            }
             steps {
-            bat 'java -version'
+           		bat 'java -version'
                 echo 'Running sample Ant...'
-                  bat 'ant sample' 
+                bat 'ant sample' 
                    
 
             }
