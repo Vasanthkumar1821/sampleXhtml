@@ -21,7 +21,6 @@ pipeline {
            		bat 'java -version'
                 echo 'Running sample Ant...'
                 bat 'ant sample' 
-                   
 
             }
         }
