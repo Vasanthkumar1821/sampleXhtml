@@ -20,7 +20,8 @@ pipeline {
             steps {
            		bat 'java -version'
                 echo 'Running sample Ant...'
-                bat 'ant sample' 
+                bat 'ant sample'
+                bat 'ant war' 
 
             }
         }
