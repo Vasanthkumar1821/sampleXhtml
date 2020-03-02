@@ -21,7 +21,7 @@ pipeline {
            		bat 'java -version'
                 echo 'Running sample Ant...'
                 bat 'ant sample'
-                bat 'ant war' 
+                bat 'ant deploy' 
 
             }
         }

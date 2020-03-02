@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project name="hello" default="war">
+<project name="hello" default="deploy">
 
 	<target name="sample">
 		<echo>Ant Working...</echo>
@@ -15,5 +15,9 @@
         <war destfile="dist/firstwarwebapp.war" webxml="WebContent/WEB-INF/web.xml">
         </war>
     </target>
+    
+    <target name="deploy" depends="war">  
+        <copy file="C:/My-Projects/Driving License UI/sampleXhtml/dist/firstwarwebapp.war" todir="C:/IBM/wlp/usr/servers/odm81000/dropins" />  
+    </target> 
 
 </project>
