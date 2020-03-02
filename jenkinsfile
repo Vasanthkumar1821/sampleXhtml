@@ -18,9 +18,6 @@ pipeline {
         }
 
         stage('Deploy') {
-            tools {
-                jdk "ibmjdk"
-            }
             steps {
                 echo 'Build and Deploy Service by repacking RES ...'
                    
