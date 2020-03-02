@@ -8,7 +8,7 @@
 	
      
      
-    <target name="war" depends="compile">
+    <target name="war">
         <war destfile="C:/Users/HVasanth/Desktop/my wars/firstwarwebapp.war" webxml="WebContent/WEB-INF/web.xml">
         </war>
     </target>
