@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project name="hello" default="deploy">
+<project name="hello" default="war">
 
 	<target name="sample">
 		<echo>Ant Working...</echo>
 	</target>
 	
-	<target name="init">
-        <mkdir dir="dist" />
-    </target>
+
      
-     
-    <target name="war" depends="init">
-        <war destfile="dist/firstwarwebapp.war" webxml="WebContent/WEB-INF/web.xml">
+    <target name="war" >
+        <war destfile="firstwarwebapp.war" webxml="WebContent/WEB-INF/web.xml">
         </war>
     </target>
     
