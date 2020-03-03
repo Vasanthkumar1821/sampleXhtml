@@ -16,8 +16,4 @@
         </war>
     </target>
     
-    <target name="deploy" depends="war">  
-        <copy file="C:/My-Projects/Driving License UI/sampleXhtml/dist/firstwarwebapp.war" todir="C:/IBM/wlp/usr/servers/odm81000/dropins" />  
-    </target> 
-
 </project>

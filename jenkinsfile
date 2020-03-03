@@ -21,8 +21,9 @@ pipeline {
            		bat 'java -version'
                 echo 'Running sample Ant...'
                 bat 'ant sample'
-                bat 'ant deploy' 
+                bat 'ant war' 
 
+ fileOperations([fileCopyOperation(excludes: '', flattenFiles: false, includes: 'dist/firstwarwebapp.war', targetLocation: 'C:/IBM/wlp/usr/servers/odm81000/dropins')])
             }
         }
 	}
