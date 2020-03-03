@@ -23,7 +23,7 @@ pipeline {
                 bat 'ant sample'
                 bat 'ant war' 
 
- fileOperations([fileCopyOperation(excludes: '', flattenFiles: false, includes: 'dist/firstwarwebapp.war', targetLocation: 'C:/IBM/wlp/usr/servers/odm81000/dropins')])
+ fileOperations([fileCopyOperation(excludes: '', flattenFiles: false, includes: 'firstwarwebapp.war', targetLocation: 'C:/IBM/wlp/usr/servers/odm81000/dropins')])
             }
         }
 	}
