@@ -5,6 +5,7 @@
 	<target name="sample">
 		<echo>Ant Working...</echo>
 	</target>
+	<javac includeantruntime="false" />
 	
   
   <path id="compile.classpath">
